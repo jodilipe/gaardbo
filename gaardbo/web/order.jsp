@@ -39,31 +39,40 @@
 		<%@include file="_header.jsp"%>
 
           <div class="row">
-          
-<h1>Bestilling af billeder</h1>
-<h2>Sådan bestiller du</h2>
-1. Skriv navnene på de billeder du vil bestille samt ønsket leveringsform, i en mail til kontakt@jonlind.dk.
-2. Herefter modtager du svar med detaljer om betaling og levering.
 
-Billederne leveres som print i følgende formater
-13 x 18 cm
-21 x 30 cm (A4)
-30 x 42 cm (A3)
-42 x 60 cm (A2)
-
-Print leveres på fotopapir af høj kvalitet (Epson Premium Glossy). Ved bestilling af print medfølger de bestilte billeder i jpg-format.
-
-Priser
-13 x 18 cm koster DKK 50,- pr stk
-21 x 30 cm koster DKK 100,- pr stk
-30 x 42 cm koster DKK 150,- pr stk
-42 x 60 cm koster DKK 200,- pr stk
-
-Montering af billede på 5 mm skumplade koster DKK 50,- ekstra pr stk.
-Levering
-Forsendelse som brev med Post Danmark koster DKK 50,- pr forsendelse (sendes på eget ansvar).
-Forsendelse som pakke med Post Danmark koster DKK 100,- pr forsendelse (forsikret og med Track & Trace).
-Alternativt kan print leveres torsdag eftermiddag hos Gaardbo Dans efter aftale.
+			<div class="content col-sm-12 col-lg-12 col-xl-12">
+				<h1>Bestilling af billeder</h1>
+				<h2>Sådan bestiller du</h2>
+				<ol>
+					<li>Skriv navnene på de billeder du vil bestille samt ønsket leveringsform, i en mail til kontakt@jonlind.dk.</li>
+					<li>Herefter modtager du svar med detaljer om betaling og levering.</li>
+				</ol>
+				
+				<h2>Billederne leveres som print i følgende formater</h2>
+				<ul>
+					<li>13 x 18 cm</li>
+					<li>21 x 30 cm (A4)</li>
+					<li>30 x 42 cm (A3)</li>
+					<li>42 x 60 cm (A2)</li>
+				</ul>
+				Print leveres på fotopapir af høj kvalitet (Epson Premium Glossy). Ved bestilling af print medfølger de bestilte billeder i jpg-format.
+				
+				<h2>Priser</h2>
+				<ul>
+					<li>13 x 18 cm koster DKK 50,- pr stk</li>
+					<li>21 x 30 cm koster DKK 100,- pr stk</li>
+					<li>30 x 42 cm koster DKK 150,- pr stk</li>
+					<li>42 x 60 cm koster DKK 200,- pr stk</li>
+				</ul>
+				Montering af billede på 5 mm skumplade koster DKK 50,- ekstra pr stk.
+				
+				<h2>Levering</h2>
+				<ul>
+					<li>Forsendelse som brev med Post Danmark koster DKK 50,- pr forsendelse (sendes på eget ansvar).</li>
+					<li>Forsendelse som pakke med Post Danmark koster DKK 100,- pr forsendelse (forsikret og med Track & Trace).</li>
+					<li>Alternativt kan print leveres torsdag eftermiddag hos Gaardbo Dans efter aftale.</li>
+				</ul>
+			</div><!--/span-->  
 
           </div><!--/row-->
         </div><!--/span-->

@@ -15,9 +15,12 @@
 		<mkdir dir="${deploy.home}/WEB-INF" />
 		<mkdir dir="${deploy.home}/WEB-INF/classes" />
 		<mkdir dir="${deploy.home}/WEB-INF/lib" />
+<!--
 		<mkdir dir="${deploy.home}/picture" />
 		<mkdir dir="${deploy.home}/preview" />
 		<mkdir dir="${deploy.home}/thumb" />
+-->		
+		
 	</target>
 	
 	<target name="CreateProjectJar">
