@@ -9,7 +9,12 @@
             <a href="index.jsp?category=<%= folder.getName() %>" class="list-group-item"><%= folder.getName() %></a>
 			<%   } %>
 			<% } %>
-			<a href="order.jsp" class="list-group-item">Bestilling af billeder</a>
+			
+			<%   if ("order".equals(request.getParameter("category"))) { %>
+			<a href="order.jsp?category=order" class="list-group-item active">Bestilling af billeder</a>
+			<%   } else { %>
+			<a href="order.jsp?category=order" class="list-group-item">Bestilling af billeder</a>
+			<%   } %>
 			
           </div>
         </div><!--/span-->
