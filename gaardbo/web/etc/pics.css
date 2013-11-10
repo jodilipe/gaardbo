@@ -1,0 +1,17 @@
+body {
+	background-color:grey;
+}
+div.thumbnail {
+	border:none;
+	background-color:grey;
+	height: 225px;
+}
+div.btn-default {
+	background-color:#eee;
+}
+div.exif_info {
+	margin: 10px;
+}
+div.preview_img {
+	margin-left: 10px;
+}
