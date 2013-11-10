@@ -1,5 +1,6 @@
 body {
 	background-color:grey;
+	margin-top: 10px;
 }
 div.thumbnail {
 	border:none;
@@ -17,4 +18,7 @@ div.preview_img {
 }
 div.content {
 	color: #eee;
+}
+img.logo {
+	float: right;
 }
