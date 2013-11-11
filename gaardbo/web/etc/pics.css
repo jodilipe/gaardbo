@@ -16,10 +16,18 @@ div.exif_info {
 }
 div.preview_img {
 	margin-left: 25px;
+	margin-top: 10px;
+}
+div.original_img {
+	margin-left: 25px;
+	margin-bottom: 10px;
 }
 div.content {
 	color: #eee;
 }
 img.logo {
 	float: right;
+}
+div.nav_buttons {
+	text-align: center;
 }

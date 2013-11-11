@@ -32,7 +32,7 @@
 
       <div class="row row-offcanvas row-offcanvas-right">
 
-        <div class="col-xs-12 col-sm-9">
+        <div class="col-lg-11">
 		
 		<!-- include _navbar_toggle_button.jsp -->
 		  
@@ -40,7 +40,7 @@
 
           <div class="row">
           
-<a href="javascript: history.go(-1)"><img title="click to close" border="0" src="<%= new PicsLogic().getOriginalRelativePath(request.getParameter("filename")) %>"></a>
+						<div class="original_img"><a href="javascript: history.go(-1)"><img title="click to close" border="0" src="<%= new PicsLogic().getOriginalRelativePath(request.getParameter("filename")) %>"></a></div>
 
           </div><!--/row-->
         </div><!--/span-->

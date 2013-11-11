@@ -80,12 +80,6 @@ public class PicsLogic {
 				return name.toLowerCase().endsWith(".jpg");
 			}
 		});
-		try {
-			new BufferedWriter(new FileWriter(new File("root.txt"))).write("hey");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		for (int i = 0; i < pictureCopiesArray.length; i++) {
 			pictureCopies.add(pictureCopiesArray[i]);
 		}

@@ -105,7 +105,60 @@ public class PictureFileUtil {
 		}
 		System.out.println("done");
 	}
+	
+	public String getPrev(String file) {
+		List<String> files = getFiles(getPictures(), file);
+		int indexOfFile = files.indexOf(file);
+		if (indexOfFile == 0) {
+			return files.get(files.size()-1);
+		}
+		return files.get(indexOfFile - 1);
+	}
 
+	public String getNext(String file) {
+		List<String> files = getFiles(getPictures(), file);
+		int indexOfFile = files.indexOf(file);
+		if (indexOfFile == files.size()-1) {
+			return files.get(0);
+		}
+		return files.get(indexOfFile + 1);
+	}
+	
+	private List<String> getFiles(Folder folder, String file) {
+		List<String> files = new ArrayList<String>();
+		getFiles(files, folder, file);
+		return files;
+	}
+	
+	private void getFiles(List<String> files, Folder folder, String file) {
+		if (inFolder(folder, file)) {
+			collectFiles(files, folder);
+		} else {
+			for(FileItem fileItem : folder.getFileItems()) {
+				if (fileItem.isFolder()) {
+					getFiles(files, (Folder) fileItem, file);
+				}
+			}
+		}
+	}
+	
+	private void collectFiles(List<String> files, Folder folder) {
+		for (FileItem fileItem : folder.getFileItems()) {
+			if (fileItem.isFile()) {
+				files.add(fileItem.getName());
+			}
+		}
+	}
+
+	private boolean inFolder(Folder folder, String file) {
+		for(FileItem fileItem : folder.getFileItems()) {
+			if (fileItem.isFile() && fileItem.getName().equals(file)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	public Map<String, String> getExifInfo(String filename) {
 		Map<String, String> result = new HashMap<String, String>();
 		try {
@@ -115,14 +168,10 @@ public class PictureFileUtil {
 					if (includeTag(tag.getTagName())) {
 						result.put(tag.getTagName(), tag.getDescription());
 					} 
-//					else {
-//						result.put(" - " + tag.getTagName(), tag.getDescription());
-//					}
 				}
 			}
 		} catch (Exception e) {
 			result.put("Exif", "no info found");
-//			throw new RuntimeException(e);
 		}
 		return result;
 	}

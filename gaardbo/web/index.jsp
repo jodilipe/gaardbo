@@ -43,8 +43,8 @@
 			<% List<String> thumbs = new PicsLogic().getThumbnails(request.getParameter("category")); %>
 			<% for (String thumb : thumbs) { %>
 				<div class="thumbnail col-xs-6 col-sm-6 col-md-4 col-lg-3">
-					<p><a href="preview.jsp?filename=<%= thumb %>"><img border="0" src="./thumb/<%= thumb %>" title="<%= thumb %>"></a></p>
-					<p><a class="btn btn-default" href="preview.jsp?filename=<%= thumb %>" role="button">Vis detaljer »</a></p>
+					<p><a href="preview.jsp?filename=<%= thumb %>&category=<%= request.getParameter("category") %>"><img border="0" src="./thumb/<%= thumb %>" title="<%= thumb %>"></a></p>
+					<p><a class="btn btn-default" href="preview.jsp?filename=<%= thumb %>" role="button">Vis detaljer <span class="glyphicon glyphicon-chevron-right"></span></a></p>
 				</div>
 			<% } %>
 
