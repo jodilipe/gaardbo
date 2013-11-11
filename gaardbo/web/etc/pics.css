@@ -6,15 +6,16 @@ div.thumbnail {
 	border:none;
 	background-color:grey;
 	height: 225px;
+	text-align: center;
 }
 div.btn-default {
 	background-color:#eee;
 }
 div.exif_info {
-	margin: 10px;
+	margin: 25px;
 }
 div.preview_img {
-	margin-left: 10px;
+	margin-left: 25px;
 }
 div.content {
 	color: #eee;
