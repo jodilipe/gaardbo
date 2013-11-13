@@ -31,3 +31,6 @@ img.logo {
 div.nav_buttons {
 	text-align: center;
 }
+a.button {
+	font-size: x-small;
+}

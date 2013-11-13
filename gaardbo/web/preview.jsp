@@ -46,9 +46,9 @@
           </div>
 
           <% if (Constants.SHOW_ORIGINALS) { %>
-						<div class="preview_img"><a href="original.jsp?filename=<%= request.getParameter("filename") %>"><img title="click to view full size" border="0" src="./preview/<%= request.getParameter("filename") %>"></a></div>
+						<div class="preview_img"><a href="original.jsp?filename=<%= request.getParameter("filename") %>"><img class="img-responsive" title="click to view full size" border="0" src="./preview/<%= request.getParameter("filename") %>"></a></div>
           <% } else { %>
-          	<div class="preview_img"><a href="index.jsp?category=<%= request.getParameter("category") %>"><img title="click to close" border="0" src="./preview/<%= request.getParameter("filename") %>"></a></div>
+          	<div class="preview_img"><a href="index.jsp?category=<%= request.getParameter("category") %>"><img class="img-responsive" title="click to close" border="0" src="./preview/<%= request.getParameter("filename") %>"></a></div>
           <% } %>
 					
 					<div class="exif_info">
