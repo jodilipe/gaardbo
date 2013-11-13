@@ -44,7 +44,7 @@
 			<% for (String thumb : thumbs) { %>
 				<div class="thumbnail col-xs-6 col-sm-6 col-md-4 col-lg-3">
 					<p><a href="preview.jsp?filename=<%= thumb %>&category=<%= request.getParameter("category") %>"><img border="0" src="./thumb/<%= thumb %>" title="<%= thumb %>"></a></p>
-					<p><a class="button btn btn-default" href="preview.jsp?filename=<%= thumb %>" role="button"><%= thumb %> <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+					<p><span class="img_description"><%= thumb %></span></p>
 				</div>
 			<% } %>
 
