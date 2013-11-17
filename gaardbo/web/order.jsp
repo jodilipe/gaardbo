@@ -26,29 +26,23 @@
 
   <body style="">
 
-	<!-- include _navbar.jsp -->  
+	<%@include file="_navbar.jsp"%>
 
     <div class="container">
+			
+		<%@include file="_category_img.jsp"%>
 
-      <div class="row row-offcanvas row-offcanvas-right">
-
-        <div class="col-xs-12 col-sm-9">
-		
-		<!-- include _navbar_toggle_button.jsp -->
-		  
-		<%@include file="_header.jsp"%>
-
-          <div class="row">
+       	<div class="row">
 
 			<div class="content col-sm-12 col-lg-12 col-xl-12">
 				<h1>Bestilling af billeder</h1>
-				<h2>Sådan bestiller du</h2>
+				<h3>Sådan bestiller du</h3>
 				<ol>
-					<li>Skriv navnene på de billeder du vil bestille samt ønsket leveringsform, i en mail til kontakt@jonlind.dk.</li>
+					<li>Skriv navnene på de billeder du vil bestille samt ønsket leveringsform, i en mail til <a href="mailto:kontakt@jonlind.dk?subject=Bestilling af billeder">kontakt@jonlind.dk</a>.</li>
 					<li>Herefter modtager du svar med detaljer om betaling og levering.</li>
 				</ol>
 				
-				<h2>Billederne leveres som print i følgende formater</h2>
+				<h3>Billederne leveres som print i følgende formater</h3>
 				<ul>
 					<li>13 x 18 cm</li>
 					<li>21 x 30 cm (A4)</li>
@@ -57,7 +51,7 @@
 				</ul>
 				Print leveres på fotopapir af høj kvalitet (Epson Premium Glossy). Ved bestilling af print medfølger de bestilte billeder i jpg-format.
 				
-				<h2>Priser</h2>
+				<h3>Priser</h3>
 				<ul>
 					<li>13 x 18 cm koster DKK 50,- pr stk</li>
 					<li>21 x 30 cm koster DKK 100,- pr stk</li>
@@ -66,7 +60,7 @@
 				</ul>
 				Montering af billede på 5 mm skumplade koster DKK 50,- ekstra pr stk.
 				
-				<h2>Levering</h2>
+				<h3>Levering</h3>
 				<ul>
 					<li>Forsendelse som brev med Post Danmark koster DKK 50,- pr forsendelse (sendes på eget ansvar).</li>
 					<li>Forsendelse som pakke med Post Danmark koster DKK 100,- pr forsendelse (forsikret og med Track & Trace).</li>
@@ -74,18 +68,10 @@
 				</ul>
 			</div><!--/span-->  
 
-          </div><!--/row-->
-        </div><!--/span-->
 
-	<%@include file="_menu.jsp"%>
-        
-      </div><!--/row-->
-
-	<%@include file="_footer.jsp"%>
+       	</div><!--/row-->
 
     </div><!--/.container-->
-
-
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -93,5 +79,6 @@
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
-</body>
+	</body>
 </html>
+          

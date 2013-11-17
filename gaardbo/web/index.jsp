@@ -26,40 +26,56 @@
 
   <body style="">
 
-	<!-- include _navbar.jsp -->  
+	<%@include file="_navbar.jsp"%>
 
     <div class="container">
+			
+		<%@include file="_category_img.jsp"%>
 
-      <div class="row row-offcanvas row-offcanvas-right">
-
-        <div class="col-xs-12 col-sm-9">
-		
-		<!-- include _navbar_toggle_button.jsp -->
-		  
-		<%@include file="_header.jsp"%>
-
-          <div class="row">
-          
-			<% List<String> thumbs = new PicsLogic().getThumbnails(request.getParameter("category")); %>
+       	<div class="row">
+        
+		<% List<String> thumbs = new PicsLogic().getThumbnails(request.getParameter("category")); %>
+		<% if (!thumbs.isEmpty()) { %>
 			<% for (String thumb : thumbs) { %>
 				<div class="thumbnail col-xs-6 col-sm-6 col-md-4 col-lg-3">
 					<p><a href="preview.jsp?filename=<%= thumb %>&category=<%= request.getParameter("category") %>"><img border="0" src="./thumb/<%= thumb %>" title="<%= thumb %>"></a></p>
 					<p><span class="img_description"><%= thumb %></span></p>
 				</div>
 			<% } %>
+		<% } else { %>
+			<div class="content col-sm-12 col-lg-12 col-xl-12">
+				<h1>gaardbodans billeder</h1>
+				<h3>Afslutning på Bellevue 2013</h3>
+				<ul>
+					<li>Opening</li>
+					<li>Circus</li>
+					<li>Rearline</li>
+					<li>Rococco</li>
+					<li>Far Away</li>
+					<li>Bakara</li>
+				</ul>
+				
+				<h3>Anja Gaardbos nummer til Copenhagen Choreographer's Competition 2013</h3>
+				<ul>
+					<li>CCC 2013</li>
+				</ul>
+				
+				<h3>Vejledning til bestilling af billeder som print</h3>
+				<ul>
+					<li>Bestilling af billeder</li>
+				</ul>
+				
+				<h3>Fotografer</h3>
+				<ul>
+					<li>Jon Lind</li>
+					<li>Jette Guldbæk</li>
+				</ul>
+			</div><!--/span-->  
+		<% } %>
 
-          </div><!--/row-->
-        </div><!--/span-->
-
-	<%@include file="_menu.jsp"%>
-        
-      </div><!--/row-->
-
-	<%@include file="_footer.jsp"%>
+       	</div><!--/row-->
 
     </div><!--/.container-->
-
-
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -67,5 +83,5 @@
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
-</body>
+	</body>
 </html>

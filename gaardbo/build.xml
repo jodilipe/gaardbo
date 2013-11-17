@@ -52,6 +52,11 @@
 		<copy todir="${deploy.home}/fonts">
 			<fileset dir="web/fonts" />
 		</copy>
+		
+		<copy todir="${deploy.home}/img">
+			<fileset dir="web/img" />
+		</copy>
+		
 		<copy todir="${deploy.home}/WEB-INF">
 			<fileset dir="web/WEB-INF">
 				<include name="web.xml" />
