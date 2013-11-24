@@ -42,3 +42,14 @@ img.category_img {
 img.site_brand {
 	margin-top:	-6px;
 }
+div.exif_item {
+	white-space: nowrap;
+}
+div.exif_name {
+	width:	200px;
+	display: inline-block;
+}
+div.exif_value {
+	width:	200px;
+	display: inline-block;
+}

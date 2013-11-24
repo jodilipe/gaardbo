@@ -44,13 +44,10 @@
 			<% } %>
 						
 			<div class="exif_info">
-			<div class="exif_item">File name: <%= request.getParameter("filename") %></div>
+			<div class="exif_item"><div class="exif_name">File name</div><div class="exif_value"><%= request.getParameter("filename") %></div></div>
 			<% Map<String, String> result = new PictureFileUtil().getExifInfo(new PicsLogic().getOriginalPath(request.getParameter("filename"))); %>	
-				<% List<String> keys = new ArrayList<String>(); %>	
-				<% keys.addAll(result.keySet()); %>	
-				<% Collections.sort(keys);%>
-				<% for (String key : keys) { %>		 
-				<div class="exif_item"><%= key + ": " + result.get(key) %></div>			
+				<% for (String key : result.keySet()) { %>
+				<div class="exif_item"><div class="exif_name"><%= key %></div><div class="exif_value"><%= result.get(key) %></div></div>			
 				<% } %>		
 			</div>
 
